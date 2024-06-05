@@ -1,12 +1,14 @@
-import { useState } from "react";
-import PetCard from "./components/PetCard";
+import { Header } from "./components/Header";
+import { Pets } from "./pages/Pets";
 
 function App() {
-	const [counter] = useState(2);
-
 	return (
-		<div className="h-screen flex flex-col gap-8 justify-center items-center bg-slate-300">
-			<PetCard counter={counter} />
+		<div>
+			<Header />
+			<main>
+				<Pets />
+			</main>
+			<footer></footer>
 		</div>
 	);
 }
