@@ -1,16 +1,30 @@
+import { Link, Outlet } from "react-router-dom";
 import { Header } from "./components/Header";
-import { Pets } from "./pages/Pets";
+import { Tab, TabList, Tabs } from "@chakra-ui/react";
 
-function App() {
+const App = () => {
 	return (
-		<div>
+		<div className="min-h-screen">
 			<Header />
 			<main>
-				<Pets />
+				<Tabs isFitted>
+					<TabList>
+						<Tab as={Link} to={"/"}>
+							Домашние животные
+						</Tab>
+						<Tab as={Link} to={"/volunteers"}>
+							Волонтёры
+						</Tab>
+						<Tab as={Link} to={"/applications"}>
+							Новости и объявления
+						</Tab>
+					</TabList>
+				</Tabs>
+				<Outlet />
 			</main>
-			<footer></footer>
+			<footer />
 		</div>
 	);
-}
+};
 
 export default App;

@@ -1,21 +1,7 @@
-import axios from "axios";
 import { PetCard } from "../components/PetCard";
-import { Envelope } from "../types/Envelope";
 import { useEffect, useState } from "react";
-import { Button } from "@chakra-ui/react";
 import { getPets } from "../services/petsService";
-
-export type Pet = {
-	id: string;
-	nickName: string;
-	description: string;
-	city: string;
-	street: string;
-	building: string;
-	index: string;
-	contactPhoneNumber: string;
-	createdDate: Date;
-};
+import { Pet } from "../types/Pet";
 
 const Pets = () => {
 	const [pets, setPets] = useState<Pet[] | null>([]);
@@ -27,14 +13,38 @@ const Pets = () => {
 			setPets(petsResponse);
 		};
 
-		fetch();
+		//fetch();
 	}, []);
 
 	return (
 		<section className="w-full pt-7 grid gap-8 grid-cols-3">
-			{pets?.map((p) => (
-				<PetCard key={p.id} pet={p} />
-			))}
+			<PetCard
+				key={1}
+				pet={{
+					id: "1",
+					nickName: "123",
+					description: "123",
+					contactPhoneNumber: "123",
+				}}
+			/>
+			<PetCard
+				key={1}
+				pet={{
+					id: "1",
+					nickName: "123",
+					description: "123",
+					contactPhoneNumber: "123",
+				}}
+			/>
+			<PetCard
+				key={1}
+				pet={{
+					id: "1",
+					nickName: "123",
+					description: "123",
+					contactPhoneNumber: "123",
+				}}
+			/>
 		</section>
 	);
 };
