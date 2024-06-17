@@ -1,7 +1,7 @@
-import { PetCard } from "../components/PetCard";
+import { PetCard } from "../../components/PetCard";
 import { useEffect, useState } from "react";
-import { getPets } from "../services/petsService";
-import { Pet } from "../types/Pet";
+import { getPets } from "../../services/petsService";
+import { Pet } from "../../types/models/Pet";
 
 const Pets = () => {
 	const [pets, setPets] = useState<Pet[] | null>([]);

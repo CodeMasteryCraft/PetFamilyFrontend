@@ -4,10 +4,10 @@ import { Tab, TabList, Tabs } from "@chakra-ui/react";
 
 const App = () => {
 	return (
-		<div className="min-h-screen">
+		<div className="min-h-screen flex flex-col">
 			<Header />
-			<main>
-				<Tabs isFitted>
+			<main className="flex flex-col flex-1">
+				<Tabs colorScheme="primary" isFitted>
 					<TabList>
 						<Tab as={Link} to={"/"}>
 							Домашние животные

@@ -10,7 +10,7 @@ import {
 	Stack,
 	Text,
 } from "@chakra-ui/react";
-import { Pet } from "../types/Pet";
+import { Pet } from "../types/models/Pet";
 
 const PetCard = (pet: Pet) => {
 	return (
@@ -32,10 +32,10 @@ const PetCard = (pet: Pet) => {
 			<Divider />
 			<CardFooter>
 				<ButtonGroup spacing="2">
-					<Button variant="solid" colorScheme="blue">
+					<Button variant="solid" colorScheme="primary">
 						Приютить
 					</Button>
-					<Button variant="ghost" colorScheme="blue">
+					<Button variant="ghost" colorScheme="gray">
 						Следить
 					</Button>
 				</ButtonGroup>
