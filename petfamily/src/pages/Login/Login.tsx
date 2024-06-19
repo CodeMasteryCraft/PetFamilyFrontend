@@ -72,6 +72,6 @@ const Login = () => {
       </form>
     </div>
   );
-};
+};                                                            
 
 export { Login };
